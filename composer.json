@@ -1,30 +1,31 @@
 {
   "name": "groupepsih/oauth2-prosanteconnect",
   "description": "Pro Sante Connect / ANS OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
+  "type": "library",
   "license": "MIT",
   "authors": [
     {
-        "name": "Denis S. Valdenaire",
-        "email": "d.valdenaire@ids.host",
-        "homepage": "https://ids.host"
+      "name": "Denis S. Valdenaire",
+      "email": "d.valdenaire@ids.host",
+      "homepage": "https://ids.host"
     }
   ],
   "keywords": [
-      "oauth",
-      "oauth2",
-      "client",
-      "authorization",
-      "authentication",
-      "prosanteconnect",
-      "ans"
+    "oauth",
+    "oauth2",
+    "client",
+    "authorization",
+    "authentication",
+    "prosanteconnect",
+    "ans"
   ],
   "require": {
     "league/oauth2-client": "^2.6"
   },
   "autoload": {
-      "psr-4": {
-          "GroupePSIH\\OAuth2\\Client\\": "src/"
-      }
+    "psr-4": {
+      "GroupePSIH\\OAuth2\\Client\\": "src/"
+    }
   },
   "require-dev": {
     "mockery/mockery": "^1.5",
