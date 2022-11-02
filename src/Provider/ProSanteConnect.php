@@ -31,7 +31,7 @@ class ProSanteConnect extends AbstractProvider
     public function getBaseAuthorizationUrl()
     {
         return $this->dev ?
-            'https://wallet.bas.esw.esante.gouv.fr/auth' :
+            'https://wallet.bas.psc.esante.gouv.fr/auth' :
             'https://wallet.esw.esante.gouv.fr/auth';
     }
 
@@ -44,8 +44,7 @@ class ProSanteConnect extends AbstractProvider
      */
     public function getBaseAccessTokenUrl(array $params)
     {
-        return ($this->dev ?
-            'https://auth.bas.esw.esante.gouv.fr' :
+        return ($this->dev ?'https://auth.bas.psc.esante.gouv.fr' :
             'https://auth.esw.esante.gouv.fr') .
             '/auth/realms/esante-wallet/protocol/openid-connect/token';
     }
@@ -59,8 +58,7 @@ class ProSanteConnect extends AbstractProvider
      */
     public function getResourceOwnerDetailsUrl(AccessToken $token)
     {
-        return ($this->dev ?
-            'https://auth.bas.esw.esante.gouv.fr' :
+        return ($this->dev ?'https://auth.bas.psc.esante.gouv.fr' :
             'https://auth.esw.esante.gouv.fr') .
             '/auth/realms/esante-wallet/protocol/openid-connect/userinfo';
     }
