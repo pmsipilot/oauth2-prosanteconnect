@@ -64,6 +64,21 @@ class ProSanteConnect extends AbstractProvider
     }
 
     /**
+     * Get the logout URL to redirect the user to the logout end point
+     * 
+     * @return string
+     * 
+     */
+    public function getLogoutUrl(string $idToken, string $postLogoutRedirectUri): string
+    {
+        return ($this->dev ? 'https://auth.bas.psc.esante.gouv.fr' :
+            'https://auth.esw.esante.gouv.fr') .
+            '/auth/realms/esante-wallet/protocol/openid-connect/logout?' .
+            'id_token_hint=' . $idToken .
+            '&post_logout_redirect_uri=' . $postLogoutRedirectUri;
+    }
+
+    /**
      * Get the default scopes used by this provider.
      *
      * @return array
